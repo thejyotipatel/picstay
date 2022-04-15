@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+  --black-1: #000;
+  --black-2: #111;
+  --black-3: #efefef;
+  --black-4: #e2e2e2;
+
+  --red-1: #e60023;
+  --red-2: #c00;
+  --white-1: #fff;
+  --white-2: #eee;
+
+  --font-size-6: 36px;
+  --font-size-5: 28px;
+  --font-size-4: 20px;
+  --font-size-3: 16px;
+  --font-size-2: 14px;
+  --font-size-1: 12px;
+
+  --box-shadow-1: 0 8px 16px #00000029;
+  --box-shadow-2: 0 4px 12px #00000014, 0 0 1px #0100001a;
+  --box-shadow-3: 0 1px 1px #0000000a;
+  --box-shadow-3: 0 2px 1px #0000000a;
+
+  --border-1: 1px solid #eee;
+  --transition: all 0.2s ease-in-out;
+
+  --light-green: #00800028;
+  --dark-green: #008000d0;
+  --light-red: #ff000028;
+  --dark-red: #aa0505d0;
+
+  --font-family: 'Roboto', sans-serif;
+
+  --lineHeight-p: 1.5rem;
+  --lineHeight-h3: 1.25rem;
+
+  --lineHeight-xl: 1.125rem;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  line-height: var(--lineHeight-p);
+  background-color: var(--white-1);
+  color: var(--black-2);
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
