@@ -11,7 +11,7 @@ const Landing = () => {
           <span className='logo-icon'>
             <BsPinterest />
           </span>
-          <span className='logo-text'>Pinterest</span>
+          <span className='logo-text'>Picstay</span>
         </div>
 
         <div className='links'>

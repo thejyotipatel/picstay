@@ -6,23 +6,23 @@ import { useEffect, useState } from 'react'
 
 const LandingHome = () => {
   const [images, setImages] = useState([])
+  const [images2, setImages2] = useState([])
   const getImages = async (pageNumber) => {
     try {
       let response = await axios.get(
-        `https://picsum.photos/v2/list?page=${pageNumber}&limit=5`
+        `https://picsum.photos/v2/list?page=${pageNumber}&limit=30`
       )
       setImages(response.data)
-      console.log(images)
     } catch (error) {
       console.log(error)
     }
   }
   useEffect(() => {
-    getImages(1)
+    getImages(3)
   }, [])
 
   return (
-    <Wrapper color={'var(--red-1)'}>
+    <Wrapper color={'blueviolet'}>
       <div className='header'>
         <h1 className='text-1'>Get your next</h1>
         <h1 className='text-2'>home decor idea</h1>
@@ -51,6 +51,8 @@ const LandingHome = () => {
           return <img src={download_url} key={id} alt={author} />
         })}
       </div>
+
+      <div className='shade'></div>
     </Wrapper>
   )
 }
@@ -60,24 +62,42 @@ const Wrapper = styled.div`
   place-content: center;
   justify-items: center;
   position: relative;
-  height: calc(100vh - 65px);
-  overflow: hidden;
+  /* overflow: hidden; */
+  height: max-content;
   .bg-img {
-    z-index: -1;
+    /* overflow: hidd; */
+    top: 150%;
+    /* width: min; */
+    /* margin: -1em; */
     position: absolute;
-
-    margin: auto;
-    bottom: 0;
-    display: flex;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 1em;
-    margin-left: -100px;
 
     img {
       max-width: 300px;
-      width: 100%;
-      border-radius: 12px 12px 0 0;
+      /* width: 100%; */
+      height: 200px;
+      border-radius: 12px;
     }
+  }
+
+  .shade {
+    position: fixed;
+    bottom: 0;
+    height: 180px;
+    max-height: 20%;
+    width: 100%;
+    z-index: 10;
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgb(255, 255, 255)
+    );
+    opacity: 1;
   }
   .header {
     display: flex;
@@ -93,7 +113,7 @@ const Wrapper = styled.div`
       line-height: var(--lineHeight-p);
       word-spacing: 0.2em;
       :nth-child(2) {
-        color: violet;
+        color: blueviolet;
         margin: 0.2em 0;
       }
     }
@@ -122,16 +142,16 @@ const Wrapper = styled.div`
     }
   }
   .scroll-btn {
+    position: absolute;
     display: flex;
     justify-content: center;
-    background-color: transparent;
-    margin: 70% 0 0 0;
+    margin: 11em auto auto auto;
     cursor: pointer;
     width: fit-content;
-    background-color: var(--red-1);
+    z-index: 9999;
+    background-color: blueviolet;
     padding: 0.2em;
     border-radius: 50%;
-    /* border: 1px solid hotpink; */
     font-size: var(--font-size-6);
     font-weight: 900;
     color: var(--black-4);
