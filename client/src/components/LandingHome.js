@@ -10,7 +10,7 @@ const LandingHome = () => {
   const getImages = async (pageNumber) => {
     try {
       let response = await axios.get(
-        `https://picsum.photos/v2/list?page=${pageNumber}&limit=30`
+        `https://picsum.photos/v2/list?page=${pageNumber}&limit=20`
       )
       setImages(response.data)
     } catch (error) {
@@ -155,6 +155,7 @@ const Wrapper = styled.div`
     font-size: var(--font-size-6);
     font-weight: 900;
     color: var(--black-4);
+    /* margin-bottom: 50%; */
   }
 
   .scroll-btn {
@@ -174,7 +175,7 @@ const Wrapper = styled.div`
 
   @media screen and (max-width: 679px) {
     .header .scroll-btn {
-      margin: 50% 0 0 0;
+      margin-top: 50%;
     }
   }
   @media screen and (max-width: 679px) {

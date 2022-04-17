@@ -117,6 +117,7 @@ const Register = () => {
 const Wrapper = styled.div`
   width: min(95%, 400px);
   margin-inline: auto;
+  margin-top: 45%;
   /* border: 2px dashed hotpink; */
   .register-contant {
     box-shadow: var(--box-shadow-2);
