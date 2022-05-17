@@ -1,6 +1,7 @@
 import Alert from './alert'
 import Header from './header'
 import SearchPanel from './searchPanel'
+import SinglePost from './singlePost'
 import { BsPinterest } from 'react-icons/bs'
 import styled from 'styled-components'
 
@@ -29,4 +30,4 @@ const Wrapper = styled.div`
     font-weight: 800;
   }
 `
-export { Alert, Header, Logo, SearchPanel }
+export { Alert, Header, Logo, SearchPanel, SinglePost }
