@@ -2,11 +2,9 @@ import { useState } from 'react'
 import { BsPinterest } from 'react-icons/bs'
 import styled from 'styled-components'
 // import { Alert } from '../components'
-<<<<<<< HEAD
-=======
+
 import { Logo } from '../components'
 
->>>>>>> eb08739... added
 import { useAppContext } from '../context/appContext'
 
 const initalState = {
@@ -57,15 +55,7 @@ const Register = () => {
     <Wrapper>
       <div className='register-contant'>
         <div className='header'>
-<<<<<<< HEAD
-          <div className='logo'>
-            <span className='logo-icon'>
-              <BsPinterest />
-            </span>
-          </div>
-=======
           <Logo />
->>>>>>> eb08739... added
           <h1>Welcome to Picstay </h1>
           {!value.isMember && <p>Find new ideas to try</p>}
         </div>
@@ -126,11 +116,7 @@ const Register = () => {
 const Wrapper = styled.div`
   width: min(95%, 400px);
   margin-inline: auto;
-<<<<<<< HEAD
-  margin-top: 45%;
-=======
   margin-top: 40%;
->>>>>>> eb08739... added
   /* border: 2px dashed hotpink; */
   .register-contant {
     box-shadow: var(--box-shadow-2);

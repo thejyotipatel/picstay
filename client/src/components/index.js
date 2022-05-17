@@ -1,7 +1,4 @@
 import Alert from './alert'
-<<<<<<< HEAD
-export { Alert }
-=======
 import Header from './header'
 import { BsPinterest } from 'react-icons/bs'
 import styled from 'styled-components'
@@ -32,4 +29,3 @@ const Wrapper = styled.div`
   }
 `
 export { Alert, Header, Logo }
->>>>>>> eb08739... added
