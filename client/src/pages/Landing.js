@@ -1,18 +1,26 @@
 import LandingLinks from '../utils/links'
 import { BsPinterest } from 'react-icons/bs'
 import LandingHome from '../components/LandingHome'
+<<<<<<< HEAD
+=======
+import { Logo } from '../components'
+>>>>>>> eb08739... added
 import styled from 'styled-components'
 
 const Landing = () => {
   return (
     <Wrapper>
       <header>
+<<<<<<< HEAD
         <div className='logo'>
           <span className='logo-icon'>
             <BsPinterest />
           </span>
           <span className='logo-text'>Picstay</span>
         </div>
+=======
+        <Logo />
+>>>>>>> eb08739... added
 
         <div className='links'>
           <nav>
@@ -47,6 +55,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 0.5em;
+<<<<<<< HEAD
     .logo {
       color: var(--red-2);
       margin: 1em;
@@ -62,6 +71,8 @@ const Wrapper = styled.div`
         font-weight: 800;
       }
     }
+=======
+>>>>>>> eb08739... added
 
     .links {
       display: flex;
