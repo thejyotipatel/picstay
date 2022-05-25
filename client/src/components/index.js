@@ -3,6 +3,7 @@ import Header from './header'
 import SearchPanel from './searchPanel'
 import SinglePost from './singlePost'
 import RelatedPost from './relatedPost'
+import UploadePost from './uploadePost'
 import { BsPinterest } from 'react-icons/bs'
 import styled from 'styled-components'
 
@@ -32,4 +33,12 @@ const Wrapper = styled.div`
   }
 `
 /* flex-wrap: wrap; */
-export { Alert, Header, Logo, SearchPanel, SinglePost, RelatedPost }
+export {
+  Alert,
+  Header,
+  Logo,
+  SearchPanel,
+  SinglePost,
+  RelatedPost,
+  UploadePost,
+}

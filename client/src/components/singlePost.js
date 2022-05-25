@@ -13,23 +13,29 @@ const SinglePost = () => {
       <div className='desc'>
         <header>
           <div className='left'>
-            <span className='dots'>
-              <GoPrimitiveDot /> <GoPrimitiveDot /> <GoPrimitiveDot />
-            </span>
-            <span>
-              <BsDownload />
-            </span>
-            <span>
-              <BsLink />
-            </span>
+            <button className='dots'>
+              <span>
+                <GoPrimitiveDot /> <GoPrimitiveDot /> <GoPrimitiveDot />
+              </span>
+            </button>
+            <button className='downlode'>
+              <span>
+                <BsDownload />
+              </span>
+            </button>
+            <a href=''>
+              <span>
+                <BsLink />
+              </span>
+            </a>
           </div>
           <div className='right'>
-            <p className='username'>
+            <button className='username'>
               username
               <span>
                 <FaCaretDown />
               </span>
-            </p>
+            </button>
 
             <button className='save'>save</button>
           </div>
@@ -42,7 +48,7 @@ const SinglePost = () => {
             eos necessitatibus officia, voluptatum a veniam sapiente
             consequuntur eveniet totam nostrum, quam commodi quia inventore
             dolor ut? Inventore, laborum dicta.
-            <button>...more</button>
+            <button className='more-btn'>...more</button>
           </p>
         </div>
       </div>
@@ -50,13 +56,14 @@ const SinglePost = () => {
   )
 }
 const Wrapper = styled.div`
-  width: min(90%, 1000px);
+  width: min(90%, 1400px);
   border: 2px solid hotpink;
   margin-inline: auto;
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-columns: 50% 50%;
+  gap: 0.5em;
 
   .single-img {
     /* width: 50%; */
@@ -83,7 +90,9 @@ const Wrapper = styled.div`
         .dots {
           margin-top: 0.8em;
           display: flex;
-          font-size: 0.6em;
+          span {
+            font-size: 0.6em;
+          }
         }
       }
       .right,
@@ -96,6 +105,12 @@ const Wrapper = styled.div`
           text-transform: capitalize;
           font-weight: 600;
           margin: 0.5em 0;
+        }
+        .username,
+        .dots,
+        .downlode {
+          background-color: transparent;
+          color: var(--black-1);
         }
         .save {
           margin: 0 0.5em;
@@ -125,8 +140,15 @@ const Wrapper = styled.div`
         word-spacing: 0.2em;
         line-height: 1.5em;
         /* max-width: 50%; */
+        .more-btn {
+          font-weight: 600;
+          text-transform: capitalize;
+        }
       }
     }
+  }
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 100%;
   }
 `
 export default SinglePost

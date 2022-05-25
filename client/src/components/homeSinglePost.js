@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCaretDown } from 'react-icons/fa'
-
+import { BsDownload } from 'react-icons/bs'
 import styled from 'styled-components'
 const HomeSinglePost = ({ ImgUrl }) => {
   return (
@@ -18,7 +18,9 @@ const HomeSinglePost = ({ ImgUrl }) => {
       <img src={ImgUrl} alt='imgeas.jpg' />
       <footer>
         <a href=''> links</a>
-        <p>download icon</p>
+        <span>
+          <BsDownload />
+        </span>
         <p>...</p>
       </footer>
     </Wrapper>
@@ -58,6 +60,7 @@ const Wrapper = styled.div`
   }
   img {
     width: 100%;
+    border-radius: 16px;
   }
   footer {
     transform: translateY(-2.5em);
