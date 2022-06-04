@@ -1,7 +1,10 @@
 import { BsDownload, BsLink } from 'react-icons/bs'
 import { GoPrimitiveDot } from 'react-icons/go'
 
-import { FaCaretDown } from 'react-icons/fa'
+import { GrLink } from 'react-icons/gr'
+
+import { MdNorthEast, MdOutlineFileUpload } from 'react-icons/md'
+import { BiChevronDown } from 'react-icons/bi'
 import styled from 'styled-components'
 import image from '../utils/image.png'
 const SinglePost = () => {
@@ -20,12 +23,12 @@ const SinglePost = () => {
             </button>
             <button className='downlode'>
               <span>
-                <BsDownload />
+                <MdOutlineFileUpload />
               </span>
             </button>
             <a href=''>
               <span>
-                <BsLink />
+                <GrLink />
               </span>
             </a>
           </div>
@@ -33,7 +36,7 @@ const SinglePost = () => {
             <button className='username'>
               username
               <span>
-                <FaCaretDown />
+                <BiChevronDown />
               </span>
             </button>
 
@@ -56,24 +59,29 @@ const SinglePost = () => {
   )
 }
 const Wrapper = styled.div`
-  width: min(90%, 1400px);
+  width: min(90%, 1500px);
   border: 2px solid hotpink;
   margin-inline: auto;
   display: grid;
-  justify-items: center;
-  align-items: center;
+  /* justify-items: center;
+  align-items: center; */
   grid-template-columns: 50% 50%;
   gap: 0.5em;
 
   .single-img {
-    /* width: 50%; */
-    max-width: 500px;
     margin: 1em;
     img {
       width: 100%;
+      cursor: zoom-in;
+      height: 700px;
     }
   }
   .desc {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     header {
       margin: 1em;
       display: flex;
@@ -105,12 +113,16 @@ const Wrapper = styled.div`
           text-transform: capitalize;
           font-weight: 600;
           margin: 0.5em 0;
+          span {
+            font-size: 1.5em;
+          }
         }
         .username,
         .dots,
         .downlode {
           background-color: transparent;
           color: var(--black-1);
+          font-size: 1.3em;
         }
         .save {
           margin: 0 0.5em;
@@ -131,7 +143,7 @@ const Wrapper = styled.div`
       }
       h1 {
         margin: 0.5em 0;
-        word-spacing: 0.2em;
+        word-spacing: 0.1em;
         line-height: 1.2em;
         /* max-width: 50%; */
       }
@@ -147,8 +159,10 @@ const Wrapper = styled.div`
       }
     }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 995px) {
     grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
   }
 `
 export default SinglePost

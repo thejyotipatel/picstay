@@ -18,8 +18,7 @@ const RelatedPost = () => {
   )
 }
 const Wrapper = styled.div`
-  width: min(90%, 1400px);
-  border: 2px solid hotpink;
+  width: min(98%, 1800px);
   margin-inline: auto;
   /* margin: 1em; */
   h3 {
@@ -27,8 +26,30 @@ const Wrapper = styled.div`
     margin: 1em 0;
   }
   .posts {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5em;
+  }
+  @media screen and (max-width: 1200px) {
+    .posts {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .posts {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1em;
+    }
   }
 `
 export default RelatedPost

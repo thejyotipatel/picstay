@@ -10,6 +10,7 @@ import { Home } from './pages/dashboard'
 function App() {
   return (
     <>
+      <Header />
       <SinglePost />
       <UploadePost />
       <RelatedPost />
